@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
 
   void _loadSplash() async {
     await Future.delayed(
-      new Duration(milliseconds: 2000),
+      new Duration(milliseconds: 6000),
     );
 
     Widget _defaultHome = Container(
@@ -55,7 +55,7 @@ class _SplashPageState extends State<SplashPage> {
                     subtitulo: "IFome! Uma marca",
                   ),
                   ComponenteSubtituloLogo(
-                    subtitulo: "Delicinhaa",
+                    subtitulo: "Delicinhaa 😋",
                   ),
                 ],
               ),

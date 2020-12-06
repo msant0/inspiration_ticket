@@ -9,6 +9,7 @@ class ItemMenuModel {
     titulo = json['titulo'];
   }
 
+  // ignore: missing_return
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['titulo'] = this.titulo;
