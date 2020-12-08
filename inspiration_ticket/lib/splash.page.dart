@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
 
   void _loadSplash() async {
     await Future.delayed(
-      new Duration(milliseconds: 6000),
+      new Duration(milliseconds: 4000),
     );
 
     Widget _defaultHome = Container(
@@ -77,6 +77,7 @@ class ComponenteSubtituloLogo extends StatelessWidget {
       subtitulo,
       style: GoogleFonts.balooBhaina(
         color: Colors.blueGrey[900],
+        fontWeight: FontWeight.w400,
       ),
       presetFontSizes: [
         16.0,
