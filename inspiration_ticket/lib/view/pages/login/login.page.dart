@@ -1,6 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:inspiration_ticket/view/pages/authorized/home/home.dart';
+import 'package:inspiration_ticket/view/pages/login/components/btnEntradaEmailFacebook.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -23,10 +24,28 @@ class _LoginPageState extends State<LoginPage> {
             BotoesEntradaEmailFacebook(
               labelFormaEntrada: "Entrar com Facebook",
               iconFormaEntrada: FontAwesomeIcons.facebook,
+              onTap: () => {
+                Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return HomePage();
+                    },
+                  ),
+                ),
+              },
             ),
             BotoesEntradaEmailFacebook(
               labelFormaEntrada: "Entrar com e-mail",
               iconFormaEntrada: Icons.email,
+              onTap: () => {
+                Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return HomePage();
+                    },
+                  ),
+                ),
+              },
             ),
             Padding(
               padding: const EdgeInsets.all(30),
@@ -45,40 +64,6 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Text("Primeira vez por aqui?")
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class BotoesEntradaEmailFacebook extends StatelessWidget {
-  final String labelFormaEntrada;
-  final IconData iconFormaEntrada;
-  const BotoesEntradaEmailFacebook({
-    Key key,
-    this.labelFormaEntrada,
-    this.iconFormaEntrada,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: ButtonTheme(
-        minWidth: 250,
-        child: RaisedButton.icon(
-          onPressed: () {},
-          color: Colors.blue[800],
-          textColor: Colors.white,
-          icon: new Icon(
-            iconFormaEntrada,
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(30.0),
-          ),
-          label: AutoSizeText(
-            labelFormaEntrada,
-            presetFontSizes: [14.0, 15.0, 16.0],
-          ),
         ),
       ),
     );
