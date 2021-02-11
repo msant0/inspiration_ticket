@@ -1,6 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:inspiration_ticket/view/pages/authorized/home/card-balance.widget.dart';
+import 'package:inspiration_ticket/view/pages/authorized/home/components/fast_acess.widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,132 +12,29 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      body: Padding(
-        padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
-        child: Container(
-          width: MediaQuery.of(context).size.width * 1,
-          height: MediaQuery.of(context).size.height * 0.26,
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                15.0,
-              ),
-            ),
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.15,
-                        height: MediaQuery.of(context).size.width * 0.08,
-                        decoration: BoxDecoration(
-                          color: Colors.amber,
-                          borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(20),
-                            topRight: Radius.circular(20),
-                          ),
-                        ),
-                      ),
-                      Image.asset(
-                        'images/meal-ticket.png',
-                        height: MediaQuery.of(context).size.width * 0.08,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        height: MediaQuery.of(context).size.width * 0.12,
-                        width: MediaQuery.of(context).size.width * 0.30,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: RichText(
-                            text: TextSpan(
-                              text: 'R\$  ',
-                              style: GoogleFonts.aldrich(
-                                color: Colors.black,
-                                fontWeight: FontWeight.normal,
-                                fontSize: 18,
-                              ),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '5',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: ',33',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            AutoSizeText(
-                              "Mateus",
-                              style: GoogleFonts.nunito(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            AutoSizeText(
-                              "Final 8611",
-                              style: GoogleFonts.nunito(
-                                color: Colors.grey[600],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            AutoSizeText(
-                              "ativo ",
-                              style: GoogleFonts.nunito(
-                                color: Colors.grey[600],
-                              ),
-                            ),
-                            Image.asset(
-                              'images/btn-green.png',
-                              fit: BoxFit.contain,
-                              height: 10,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
+            child: CardBalanceWidget(),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Container(
+              height: MediaQuery.of(context).size.width * 0.3,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return FastAcessComponent(
+                    icon: Icons.photo_size_select_actual_outlined,
+                    label: 'Fast Acess',
+                  );
+                },
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
