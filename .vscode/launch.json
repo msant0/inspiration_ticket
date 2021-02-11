@@ -6,7 +6,6 @@
     "configurations": [
         {
             "name": "inspiration_ticket",
-            "cwd": "inspiration_ticket",
             "request": "launch",
             "type": "dart"
         }
