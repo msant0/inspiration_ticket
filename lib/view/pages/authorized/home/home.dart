@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inspiration_ticket/view/pages/authorized/home/advertisements.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/home/banner-food.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/home/card-balance.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/home/components/fast_acess.widget.dart';
@@ -35,7 +36,11 @@ class _HomeState extends State<HomePage> {
               ),
             ),
           ),
-          BannerFood(),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: BannerFoodWidget(),
+          ),
+          AdvertisimentsWidget(),
         ],
       ),
     );
