@@ -53,7 +53,7 @@ class _AdvertisimentsWidgetState extends State<AdvertisimentsWidget> {
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.5,
                             child: AutoSizeText(
-                              'Qual o papel do líder na pandemia?',
+                              "What is the leader's role in the pandemic?",
                               style: GoogleFonts.nunito(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -102,7 +102,7 @@ class _AdvertisimentsWidgetState extends State<AdvertisimentsWidget> {
                         Padding(
                           padding: const EdgeInsets.only(right: 8.0),
                           child: AutoSizeText(
-                            'Dê a sua opinião',
+                            'Give your opinion',
                             style: GoogleFonts.nunito(
                               color: Colors.red[800],
                               fontWeight: FontWeight.bold,

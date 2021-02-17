@@ -27,12 +27,6 @@ class Routes {
         ),
         debugShowCheckedModeBanner: false,
       ),
-      // MultiProvider(
-      //   providers: [
-      //     // Provider
-      //   ],
-      //   child: MyMaterialApp(),
-      // ),
     );
   }
 }

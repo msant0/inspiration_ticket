@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:inspiration_ticket/view/pages/authorized/home/advertisements.widget.dart';
-import 'package:inspiration_ticket/view/pages/authorized/home/banner-food.widget.dart';
-import 'package:inspiration_ticket/view/pages/authorized/home/card-balance.widget.dart';
-import 'package:inspiration_ticket/view/pages/authorized/home/components/fast_acess.widget.dart';
+import 'package:inspiration_ticket/view/pages/authorized/cards/cards.widget.dart';
+import 'package:inspiration_ticket/view/pages/authorized/home/bottom-menu/bottom-menu.widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,39 +8,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
+  TabItem _currentTab = TabItem.cards;
+  Map<TabItem, GlobalKey<NavigatorState>> _navigatorKeys = {
+    TabItem.cards: GlobalKey<NavigatorState>(),
+    TabItem.promotions: GlobalKey<NavigatorState>(),
+    TabItem.establishments: GlobalKey<NavigatorState>(),
+    TabItem.more: GlobalKey<NavigatorState>(),
+  };
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
-            child: CardBalanceWidget(),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: MediaQuery.of(context).size.width * 0.3,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 6,
-                itemBuilder: (context, index) {
-                  return FastAcessComponent(
-                    icon: Icons.photo_size_select_actual_outlined,
-                    label: 'Fast Acess',
-                  );
-                },
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
-            child: BannerFoodWidget(),
-          ),
-          AdvertisimentsWidget(),
-        ],
-      ),
+      body: _selectedItemMenu(_currentTab),
+      bottomNavigationBar: BottomMenuWidget(),
     );
+  }
+
+  Widget _selectedItemMenu(TabItem tabItem) {
+    if (tabItem == TabItem.cards) {
+      return CardsWidget();
+    } else {
+      return Container();
+    }
   }
 }

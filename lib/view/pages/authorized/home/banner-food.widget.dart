@@ -15,8 +15,8 @@ class BannerFoodWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: AutoSizeText(
-              "Com a Ticket® todo mundo sai ganhando!",
-              presetFontSizes: [14.0, 12.0],
+              "With Ticket® everybody wins!",
+              presetFontSizes: [18.0, 14.0],
               style: GoogleFonts.nunito(
                 fontWeight: FontWeight.bold,
               ),
