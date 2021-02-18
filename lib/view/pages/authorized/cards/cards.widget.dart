@@ -38,7 +38,7 @@ class _CardsWidgetState extends State<CardsWidget> {
           padding: const EdgeInsets.only(bottom: 10.0),
           child: BannerFoodWidget(),
         ),
-        SingleChildScrollView(child: AdvertisimentsWidget()),
+        AdvertisimentsWidget(),
       ],
     );
   }
