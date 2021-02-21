@@ -4,12 +4,12 @@ import 'package:inspiration_ticket/view/pages/authorized/home/banner-food.widget
 import 'package:inspiration_ticket/view/pages/authorized/home/card-balance.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/home/components/fast_acess.widget.dart';
 
-class CardsWidget extends StatefulWidget {
+class CardsPage extends StatefulWidget {
   @override
   _CardsWidgetState createState() => _CardsWidgetState();
 }
 
-class _CardsWidgetState extends State<CardsWidget> {
+class _CardsWidgetState extends State<CardsPage> {
   @override
   Widget build(BuildContext context) {
     return Column(

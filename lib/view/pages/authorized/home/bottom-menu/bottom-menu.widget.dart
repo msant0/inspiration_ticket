@@ -43,6 +43,9 @@ class BottomMenuWidget extends StatelessWidget {
         _itemMenu(TabItem.establishments, FontAwesomeIcons.store),
         _itemMenu(TabItem.more, FontAwesomeIcons.ellipsisH),
       ],
+      onTap: (index) => onSelectTab(
+        TabItem.values[index],
+      ),
     );
   }
 }
