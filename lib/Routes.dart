@@ -21,6 +21,10 @@ class Routes {
   Routes() {
     runApp(
       MaterialApp(
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+        ),
+        themeMode: ThemeMode.dark,
         home: MyMaterialApp(
           new SplashPage(),
           routes,

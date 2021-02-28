@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inspiration_ticket/shared/routers/transaction/style.dart';
 import 'package:inspiration_ticket/view/pages/authorized/cards/cards.page.dart';
 import 'package:inspiration_ticket/view/pages/authorized/home/bottom-menu/bottom-menu.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/promotions/promotion.page.dart';
@@ -20,7 +21,7 @@ class _HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: StyleShared().scaffoldColor,
       body: _selectedPage(_currentTab),
       bottomNavigationBar: BottomMenuWidget(
         onSelectTab: _selectedPage,
