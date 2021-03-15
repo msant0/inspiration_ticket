@@ -63,7 +63,14 @@ class _PromotionPageState extends State<PromotionPage> {
               ),
             ),
             dividerContainerInformations(),
+            SizedBox(
+              height: utils.mediaQuery(context, 0.01),
+            ),
             cuponLine(),
+            SizedBox(
+              height: utils.mediaQuery(context, 0.15),
+            ),
+            exibitionCuponsWidget(),
           ],
         ),
       ),
@@ -126,6 +133,34 @@ class _PromotionPageState extends State<PromotionPage> {
       width: Utils().mediaQuery(context, double.infinity),
       height: Utils().mediaQuery(context, 0.1),
       color: Colors.grey[200],
+    );
+  }
+
+  Widget exibitionCuponsWidget() {
+    return Column(
+      children: [
+        Image.asset(
+          'images/search-ticket.png',
+          height: utils.mediaQuery(context, 0.4),
+        ),
+        SizedBox(
+          height: utils.mediaQuery(context, 0.1),
+        ),
+        AutoSizeText(
+          "Sem cupons por perto",
+          style: GoogleFonts.nunito(fontWeight: FontWeight.bold),
+          presetFontSizes: [22.0, 20.0],
+        ),
+        SizedBox(
+          height: utils.mediaQuery(context, 0.04),
+        ),
+        AutoSizeText(
+          "Por enquanto, não encontramos nenhum cupom disponível.",
+          style: GoogleFonts.nunito(),
+          presetFontSizes: [16.0, 14.0],
+          textAlign: TextAlign.center,
+        ),
+      ],
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:inspiration_ticket/view/pages/authorized/cards/advertisements.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/cards/banner-food.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/cards/card-balance.widget.dart';
-import 'package:inspiration_ticket/view/pages/authorized/cards/components/fast_acess.widget.dart';
+import 'package:inspiration_ticket/view/components/fast_acess.widget.dart';
 
 class CardsPage extends StatefulWidget {
   @override
