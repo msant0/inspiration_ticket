@@ -14,7 +14,7 @@ class _AdvertisimentsWidgetState extends State<AdvertisimentsWidget> {
     return Flexible(
       child: Container(
         width: double.infinity,
-        // height: MediaQuery.of(context).size.height * 0.3,
+        height: MediaQuery.of(context).size.height * 0.3,
         child: Padding(
           padding: const EdgeInsets.only(
             top: 10.0,
