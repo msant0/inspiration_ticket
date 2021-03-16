@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inspiration_ticket/shared/routers/transaction/style.dart';
 import 'package:inspiration_ticket/view/pages/authorized/cards/cards.page.dart';
-import 'package:inspiration_ticket/view/pages/authorized/establishments/establishments.dart';
+import 'package:inspiration_ticket/view/pages/authorized/establishments/establishments.page.dart';
 import 'package:inspiration_ticket/view/pages/authorized/home/bottom-menu/bottom-menu.widget.dart';
 import 'package:inspiration_ticket/view/pages/authorized/promotions/promotion.page.dart';
 
